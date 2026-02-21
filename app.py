@@ -21,7 +21,7 @@ app.add_middleware(
 class ReceiptLinesArgs(BaseModel):
     image: str
 
-@app.get("/", status_code=status.HTTP_200_OK)
+@app.get("/")
 def ping():
     return {"message": "Healthy!"}
 
