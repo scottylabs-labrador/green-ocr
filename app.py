@@ -1,7 +1,7 @@
 import base64
 from datetime import datetime
 from io import BytesIO
-from fastapi import FastAPI
+from fastapi, status import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import json
 from ocr import scan_receipt
@@ -21,9 +21,9 @@ app.add_middleware(
 class ReceiptLinesArgs(BaseModel):
     image: str
 
-@app.get("/status")
+@app.get("/", status_code=status.HTTP_200_OK)
 def ping():
-    print("Hello")
+    return {"message": "Healthy!"}
 
 @app.post("/receiptLines")
 def scan_receipt_image(args: ReceiptLinesArgs):
