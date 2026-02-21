@@ -1,0 +1,16 @@
+# Ignore local virtual environments
+venv/
+.venv/
+env/
+
+# Ignore local images and output folders (This fixes your error!)
+imgs/
+output/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore git history
+.git
+.gitignore

@@ -1,0 +1,5 @@
+.venv
+env/*
+imgs
+output
+__pycache__
